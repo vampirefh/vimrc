@@ -1,3 +1,5 @@
+colorscheme harlequin.vim
+
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode

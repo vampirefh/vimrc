@@ -6,6 +6,7 @@ cd $1
 
 VIMRC="set runtimepath+=$1
 
+source $1/myvimrcs/vfh.predefine.vim
 source $1/vimrcs/basic.vim
 source $1/vimrcs/filetypes.vim
 source $1/vimrcs/plugins_config.vim

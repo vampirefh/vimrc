@@ -4,6 +4,7 @@ set -e
 cd ~/.vim_runtime
 
 echo 'set runtimepath+=~/.vim_runtime
+let g:no_flake8_maps=1
 
 source ~/.vim_runtime/vimrcs/basic.vim
 source ~/.vim_runtime/vimrcs/filetypes.vim
@@ -17,6 +18,9 @@ endtry' > ~/.vimrc
 
 echo 'set -g default-command "reattach-to-user-namespace -l zsh"
 ' > ~/.tmux.conf
+
+mkdir -p ~/.vimrc/colors
+cp ./colors/* ~/.vimrc/colors/
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
 echo "For complete use, the Vundle installation process must be done manually."
