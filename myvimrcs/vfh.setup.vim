@@ -1,9 +1,5 @@
 colorscheme harlequin.vim
 
-let &t_SI.="\e[5 q" "SI = INSERT mode
-let &t_SR.="\e[4 q" "SR = REPLACE mode
-let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
-
 autocmd FileType cpp let b:dispatch = 'clang++ % -o %<.out && ./%<.out'
 autocmd FileType cpp nnoremap <buffer> <F7> :w<cr>:Dispatch clang++ % -o %<.out <cr>
 autocmd FileType python let b:dispatch = 'python3 %'
