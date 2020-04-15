@@ -20,6 +20,9 @@ let g:colors_name = "harlequin"
 let s:text = ['#F8F8F2', 15]
 let s:text_bg = ['#1C1B1A', 234]
 
+" HACK : I love terminal
+let s:text_bg_none = [0, 0]
+
 let s:white = ['#FFFFFF', 15]
 let s:black = ['#000000', 0]
 let s:greys = [['#BEBEBE', 250], ['#808080', 244], ['#696969', 242], ['#545454', 240], ['#343434', 236], ['#080808', 232]]
@@ -67,9 +70,17 @@ function! s:Highlight(group_name, guifg, guibg, gui, guisp)
     endif
 
     if has("gui_running")
-        exe 'hi ' . a:group_name . ' guifg=' . guifg[0] . ' guibg=' . guibg[0] . ' gui=' . gui . ' guisp=' . guisp[0]
+        if guibg[0] > 0
+            exe 'hi ' . a:group_name . ' guifg=' . guifg[0] . ' guibg=' . guibg[0] . ' gui=' . gui . ' guisp=' . guisp[0]
+        else
+            exe 'hi ' . a:group_name . ' guifg=' . guifg[0] . ' gui=' . gui . ' guisp=' . guisp[0]
+        endif
     else
-        exe 'hi ' . a:group_name . ' ctermfg=' . guifg[1] . ' ctermbg=' . guibg[1] . ' cterm=' . gui
+        if guibg[1] > 0
+            exe 'hi ' . a:group_name . ' ctermfg=' . guifg[1] . ' ctermbg=' . guibg[1] . ' cterm=' . gui
+        else
+            exe 'hi ' . a:group_name . ' ctermfg=' . guifg[1] . ' cterm=' . gui
+        endif
     endif
 endfunction
 
@@ -112,7 +123,7 @@ function! s:HighlightX(group_name, guifg, guibg, gui, guisp)
     exe hi_str
 endfunction
 
-call s:Highlight('Normal', s:text, s:text_bg, '', '')
+call s:Highlight('Normal', s:text, s:text_bg_none, '', '')
 
 call s:Highlight('Statement',   s:cerise, '', 'bold', '')
 call s:Highlight('Keyword',     s:cerise, '', 'bold', '')
