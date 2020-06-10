@@ -10,6 +10,7 @@ Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'vim-airline/vim-airline'
 Plugin 'glidenote/memolist.vim'
+Plugin 'metakirby5/codi.vim'
 call vundle#end()
 filetype plugin indent on
 
