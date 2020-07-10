@@ -3,7 +3,7 @@ set nocompatible
 set clipboard=unnamed
 set autochdir
 
-colorscheme harlequin 
+colorscheme codedark 
 
 "highlight Normal ctermbg=NONE
 "highlight nonText ctermbg=NONE

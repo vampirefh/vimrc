@@ -11,6 +11,7 @@ Plugin 'valloric/youcompleteme'
 Plugin 'vim-airline/vim-airline'
 Plugin 'glidenote/memolist.vim'
 Plugin 'metakirby5/codi.vim'
+Plugin 'tomasiser/vim-code-dark'
 call vundle#end()
 filetype plugin indent on
 

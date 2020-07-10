@@ -20,8 +20,8 @@ endtry' > ~/.vimrc
 echo 'set -g default-command "reattach-to-user-namespace -l zsh"
 ' > ~/.tmux.conf
 
-#mkdir -p ~/.vim_runtime/colors
-#cp ./colors/* ~/.vim_runtime/colors/
+mkdir -p ~/.vim/colors
+cp -rf ./colors/* ~/.vim/colors/
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
 echo "For complete use, the Vundle installation process must be done manually."
